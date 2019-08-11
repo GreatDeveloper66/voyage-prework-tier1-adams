@@ -1,6 +1,92 @@
-h1{
-	font-family: fantasy;
-	color: red;
-	font-size: 30px;
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+body {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-start;
+	background-color: #3d3e41;
+	height: 75px;
+	position: sticky;
+}
+
+header button.navbutton {
+	height: 50px;
+	color: #FFFFFF;
+	font-size: 25px;
+	background-color: #3d3e41;
+	border: 1px solid #FFFF;
+	width: 140px;
+	margin-left: 15px;
+
+}
+
+header button.navbutton:hover {
+	filter: brightness(150%);
+	cursor: pointer;
+}
+
+header button.navbutton.active {
+	filter: brightness(150%);
+}
+
+header i {
+	font-size: 60px;
+	color: #FFFEFA;
+}
+
+i:hover {
+	cursor: pointer;
+}
+
+menu.navmenu {
+	display: none;
+}
+
+menu.collapsemenu {
+	display: none;
+	flex-direction: column;
+	width: 100vw;
+}
+
+menu.collapsemenu a button {
+	width: 99%;
 	text-align: center;
+}
+
+i#accordian {
+	display: flex;
+}
+
+div.topbanner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 500px;
+	background: url("bg-1.jpg") no-repeat fixed center;
+}
+
+@media only screen and (min-width: 768px) {
+	header {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	menu.navmenu {
+		display: flex;
+	}
+
+	menu.collapsemenu {
+		display: none;
+	}
+
+	i#accordian {
+		display: none;
+	}
 }

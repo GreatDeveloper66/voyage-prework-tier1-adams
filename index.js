@@ -7,5 +7,14 @@
 /*jshint esversion:6*/
 
 window.onload = () => {
-	console.log("hello world");
+	document.getElementById("accordian").addEventListener("click", function () {
+		let collapse = document.querySelector("menu.collapsemenu");
+		const mode = collapse.style.display;
+		if (mode === "none") {
+			collapse.style.display = "flex";
+		} else {
+			collapse.style.display = "none";
+		}
+
+	});
 };
