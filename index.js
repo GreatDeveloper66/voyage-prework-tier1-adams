@@ -6,15 +6,18 @@
 /*global $*/
 /*jshint esversion:6*/
 
-window.onload = () => {
-	document.getElementById("accordian").addEventListener("click", function () {
-		let collapse = document.querySelector("menu.collapsemenu");
-		const mode = collapse.style.display;
-		if (mode === "none") {
-			collapse.style.display = "flex";
-		} else {
-			collapse.style.display = "none";
-		}
 
+
+window.onload = () => {
+	const toggleDropDown = () => {
+		let collapse = document.querySelector("menu.collapsemenu");
+		collapse.classList.toggle("slidedown");
+		collapse.classList.toggle("slideup");
+	};
+
+	document.getElementById("accordian").addEventListener("click", toggleDropDown);
+
+	Array.from(document.querySelectorAll("menu.collapsemenu a button")).forEach(button => {
+		button.addEventListener("click", toggleDropDown);
 	});
 };
