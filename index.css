@@ -4,6 +4,7 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
+/*
 header {
 	display: flex;
 	flex-direction: column;
@@ -12,6 +13,19 @@ header {
 	background-color: #3d3e41;
 	height: 75px;
 	position: sticky;
+}
+*/
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 100%;
+	height: 650px;
+	background: url("bg-1.jpg") no-repeat fixed center;
+}
+
+header menu {
+	background-color: #3d3e41;
 }
 
 header button.navbutton {
@@ -45,6 +59,9 @@ i:hover {
 
 menu.navmenu {
 	display: none;
+	height: 75px;
+	width: 100%;
+	margin-top: -5px;
 }
 
 menu.collapsemenu {
@@ -62,24 +79,41 @@ i#accordian {
 	display: flex;
 }
 
-div.topbanner {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 500px;
-	background: url("bg-1.jpg") no-repeat fixed center;
+div.titleblock {
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+
+}
+
+div.titleblock h1 {
+	font-size: 70px;
+	text-shadow: 2px 2px #000;
+	margin-bottom: 0px;
+}
+
+div.titleblock h2 {
+	font-size: 25px;
+	text-shadow: 1px 1px #333;
+	margin-top: 0px;
 }
 
 @media only screen and (min-width: 768px) {
 	header {
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
+	}
+	
+	div.titleblock {
+		margin: auto;
 	}
 
 	menu.navmenu {
 		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	menu.collapsemenu {
