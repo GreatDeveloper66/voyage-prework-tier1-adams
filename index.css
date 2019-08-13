@@ -51,6 +51,7 @@ header button.navbutton.active {
 }
 
 header i {
+	position: fixed;
 	font-size: 60px;
 	color: #FFFEFA;
 }
@@ -116,19 +117,25 @@ div.titleblock h2 {
 	max-height: 300px;
 }
 
-div.columns {
-	display: flex;
-	justify-content: space-around;
-	align-items: stretch;
+div.row1 {
+	margin: auto;
+	margin-top: 75px;
+	display: grid;
+	grid-template: 1fr 1fr 75px/repeat(3, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
+	width: 90%;
+	max-width: 1100px;
+	background-color: green;
 	height: 400px;
-	max-width: 800px;
-	background-color: blue;
 }
 
-div.column-3 {
-	background-color: transparent;
-	border: 2px solid black;
-	width: 100%;
+div.headerimg {
+	background-color: aqua;
+	border: 1px solid black;
+}
+div.textbox {
+	background-color: red;
 }
 
 @media only screen and (min-width: 768px) {
@@ -143,6 +150,7 @@ div.column-3 {
 	}
 
 	menu.navmenu {
+		position: fixed;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -156,7 +164,4 @@ div.column-3 {
 		display: none;
 	}
 	
-	div.column-3 {
-		width: 33%;
-	}
 }
