@@ -125,18 +125,58 @@ div.row1 {
 	grid-column-gap: 20px;
 	grid-row-gap: 10px;
 	width: 90%;
-	max-width: 1100px;
-	background-color: green;
+	max-width: 1130px;
 	height: 400px;
 }
 
-div.headerimg {
-	background-color: aqua;
-	border: 1px solid black;
+div.textbox h2, div.textbox p {
+	margin-left: 20px;
 }
-div.textbox {
-	background-color: red;
+
+div.columnfooter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+div.columnfooter button {
+	border-radius: 5px;
+	font-size: 18px;
+	padding: 10px 30px;
+	width: 170px;
+	height: 40px;
+	color: #FFFF;
+	transition: all 0.3s ease;
+	text-align: center;
+	line-height: 18px;
+}
+
+div.columnfooter button:hover {
+	cursor: pointer;
+}
+
+div.columnfooter button.greenbutton {
+	background-color: #178A27;
+}
+
+div.columnfooter button.lightbluebutton {
+	background-color: #1686C1;
+}
+
+div.columnfooter button.redbutton {
+	background-color: #852406;
+}
+
+div.textbox h2.greenheader {
+	color: #178A27;
+}
+div.textbox h2.lightblueheader {
+	color: #1686C1;
+}
+div.textbox h2.greyheader {
+	color: #666666;
+}
+
 
 @media only screen and (min-width: 768px) {
 	header {
