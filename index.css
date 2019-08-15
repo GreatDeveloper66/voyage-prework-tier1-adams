@@ -26,6 +26,12 @@ header {
 	
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
 header menu {
 	background-color: #3d3e41;
 }
@@ -129,8 +135,26 @@ div.row1 {
 	height: 400px;
 }
 
+div.row2, div.row4, div.row5, div.row6 {
+	margin:auto;
+	margin-top: 50px;
+	display: grid;
+	width: 90%;
+	max-width: 1130px;
+	height: 400px;
+	background-color: green;
+}
+
 div.textbox h2, div.textbox p {
 	margin-left: 20px;
+}
+
+div.row3 {
+	margin:auto;
+	margin-top: 25px;
+	height: 200px;
+	width: 100%;
+	background-color: aqua;
 }
 
 div.columnfooter {
@@ -177,6 +201,38 @@ div.textbox h2.greyheader {
 	color: #666666;
 }
 
+@media only screen and (max-width: 768px){
+	div.row1 {
+		grid-template: 1fr 1fr 75px 1fr 1fr 75px 1fr 1fr 75px/1fr;
+	}
+	div.headerimg:nth-of-type(1){
+		grid-row-start: 1;
+	}
+	div.headerimg:nth-of-type(2){
+		grid-row-start: 3;
+	}
+	div.headerimg:nth-of-type(3){
+		grid-row-start: 5;
+	}
+	div.textbox:nth-of-type(1){
+		grid-row-start: 2;
+	}
+	div.textbox:nth-of-type(2){
+		grid-row-start: 4;
+	}
+	div.textbox:nth-of-type(3){
+		grid-row-start: 6;
+	}
+	div.columnfooter:nth-of-type(1){
+		grid-row-start: 3;
+	}
+	div.columnfooter:nth-of-type(2){
+		grid-row-start: 5;
+	}
+	div.columnfooter:nth-of-type(3){
+		grid-row-start: 7;
+	}
+}
 
 @media only screen and (min-width: 768px) {
 	header {
