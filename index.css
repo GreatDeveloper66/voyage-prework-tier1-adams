@@ -5,17 +5,6 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-/*
-header {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: flex-start;
-	background-color: #3d3e41;
-	height: 75px;
-	position: sticky;
-}
-*/
 header {
 	display: flex;
 	flex-direction: column;
@@ -46,8 +35,9 @@ button {
 	transition: all 0.3s ease;
 }
 
-button: hover {
+button:hover {
 	cursor: pointer;
+	filter: brightness(150%);
 }
 
 header button.navbutton {
@@ -62,8 +52,7 @@ header button.navbutton {
 }
 
 header button.navbutton:hover {
-	filter: brightness(150%);
-	cursor: pointer;
+	
 }
 
 header button.navbutton.active {
