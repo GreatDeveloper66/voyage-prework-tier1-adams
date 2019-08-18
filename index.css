@@ -198,12 +198,12 @@ div.row6 {
 }
 
 div.row3 {
-	background: url("bg-2.jpg") no-repeat center;
+	background: url("bg-2.jpg") no-repeat fixed center;
 	background-size: cover;
 }
 
 div.row6 {
-	background: url("bg-3.jpg") no-repeat center;
+	background: url("bg-3.jpg") no-repeat fixed center;
 	background-size: cover;
 	height: 700px;
 }

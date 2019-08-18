@@ -8,7 +8,7 @@
 
 
 
-window.onload = () => {
+window.onload = () => {s
 	const toggleDropDown = () => {
 		
 		let navmenu = document.querySelector("menu.navmenu");
