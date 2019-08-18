@@ -10,14 +10,16 @@
 
 window.onload = () => {
 	const toggleDropDown = () => {
-		let collapse = document.querySelector("menu.collapsemenu");
-		collapse.classList.toggle("slidedown");
-		collapse.classList.toggle("slideup");
+		
+		let navmenu = document.querySelector("menu.navmenu");
+		navmenu.classList.toggle("slidedown");
+		navmenu.classList.toggle("slideup");
 	};
 
 	document.getElementById("accordian").addEventListener("click", toggleDropDown);
 
-	Array.from(document.querySelectorAll("menu.collapsemenu a button")).forEach(button => {
+	Array.from(document.querySelectorAll("menu.navmenu a button")).forEach(button => {
 		button.addEventListener("click", toggleDropDown);
 	});
+	
 };

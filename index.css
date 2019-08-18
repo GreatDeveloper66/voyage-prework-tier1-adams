@@ -14,6 +14,19 @@ header {
 	background-size: cover;
 }
 
+menu {
+	background-color: #3d3e41;
+}
+
+header menu {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	overflow-x: hidden;
+	margin-top: 75px;
+	width: 100vw;
+}
+
 h2 {
 	text-shadow: 2px 2px #333;
 	font-size: 36px;
@@ -25,30 +38,27 @@ img {
 	border: none;
 }
 
-menu {
-	background-color: #3d3e41;
-}
-
 button {
 	transition: all 0.3s ease;
+}
+button:hover, .active {
+	filter: brightness(150%);
 }
 
 button:hover {
 	cursor: pointer;
-	filter: brightness(150%);
 }
 
-button.navbutton {
+header button {
 	height: 50px;
 	color: #FFFFFF;
 	font-size: 25px;
 	background-color: #3d3e41;
 	border: 1px solid #FFFF;
-	width: 140px;
 	margin-left: 15px;
-
+	width: 100%;
+	text-align: center;
 }
-
 
 header i {
 	position: fixed;
@@ -60,6 +70,14 @@ i:hover {
 	cursor: pointer;
 }
 
+
+/*
+menu.navmenu a button {
+	width: 100%;
+	text-align: center;
+}
+
+
 menu.navmenu {
 	display: none;
 	height: 75px;
@@ -69,7 +87,7 @@ menu.navmenu {
 
 menu.collapsemenu {
 	display: flex;
-	position: absolute;
+	position: fixed;
 	margin-top: 75px;
 	flex-direction: column;
 	width: 75vw;
@@ -80,6 +98,7 @@ menu.collapsemenu a button {
 	width: 100%;
 	text-align: center;
 }
+*/
 
 i#accordian {
 	display: flex;
@@ -340,11 +359,21 @@ div.column h2.greyheader {
 		align-items: center;
 		justify-content: flex-start;
 	}
-
-	div.titleblock {
-		margin: auto;
+	
+	header button {
+		width: 140px;
 	}
 
+	menu.navmenu {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		max-height: 75px;
+		width: 100%;
+		height: 100px;
+		margin-top: -5px;
+	}
+	/*
 	menu.navmenu {
 		position: fixed;
 		display: flex;
@@ -355,7 +384,12 @@ div.column h2.greyheader {
 	menu.collapsemenu {
 		display: none;
 	}
-
+*/
+	
+		div.titleblock {
+		margin: auto;
+	}
+	
 	i#accordian {
 		display: none;
 	}
