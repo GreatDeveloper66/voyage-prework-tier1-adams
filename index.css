@@ -70,36 +70,6 @@ i:hover {
 	cursor: pointer;
 }
 
-
-/*
-menu.navmenu a button {
-	width: 100%;
-	text-align: center;
-}
-
-
-menu.navmenu {
-	display: none;
-	height: 75px;
-	width: 100%;
-	margin-top: -5px;
-}
-
-menu.collapsemenu {
-	display: flex;
-	position: fixed;
-	margin-top: 75px;
-	flex-direction: column;
-	width: 75vw;
-	overflow-x: hidden;
-}
-
-menu.collapsemenu a button {
-	width: 100%;
-	text-align: center;
-}
-*/
-
 i#accordian {
 	display: flex;
 }
@@ -167,8 +137,6 @@ div.column button {
 	text-align: center;
 	line-height: 18px;
 }
-
-
 
 div.column button:hover {
 	cursor: pointer;
@@ -303,13 +271,17 @@ footer h2 {
 form {
 	display: grid;
 	grid-template: repeat(8, 1fr)/1fr;
+	grid-gap: 15px;
+	grid-auto-rows: auto;
+	max-width: 600px;
+	height: 300px;
 	grid-template-areas: "messagebox"
 		"messagebox"
 		"messagebox"
-		"textbox"
-		"textbox"
 		"inputbox"
 		"inputbox"
+		"textbox"
+		"textbox"
 		"sendbutton";
 }
 
@@ -329,7 +301,41 @@ form div.sendbutton {
 	grid-area: sendbutton;
 }
 
+textarea, input {
+	width: 100%;
+	border-radius: 5px;
+	padding-left: 10px;
+	color: #000;
+	background: #F2F2F2 none repeat scroll 00;
+	opacity: 0.4;
+}
 
+div.textbox textarea {
+	height: 25%;
+}
+div.messagebox textarea {
+	height: 33%;
+}
+
+input {
+	height: 7%;
+	margin-bottom: 5px;
+}
+
+form button {
+	background-color: #262628;
+	color: #FFF;
+	margin-top: 20px;
+	padding: 10px 30px;
+	border-radius: 10px;
+	font-size: 18px;
+	transition: all 0.5s;
+}
+
+form button:hover {
+		background-color: #FFFFFF;
+		color: #000000;
+}
 
 div.column button.greenbutton {
 	background-color: #178A27;
@@ -373,18 +379,6 @@ div.column h2.greyheader {
 		height: 100px;
 		margin-top: -5px;
 	}
-	/*
-	menu.navmenu {
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	menu.collapsemenu {
-		display: none;
-	}
-*/
 	
 		div.titleblock {
 		margin: auto;
@@ -407,14 +401,16 @@ div.column h2.greyheader {
 		grid-template: 1fr 1fr/1fr 1fr;
 	}
 
-	div.row6 form {
+	form {
 		display: grid;
 		grid-template: repeat(8, 1fr)/1fr 1fr;
+		/*
 		width: 80%;
 		max-width: 600px;
 		height: 300px;
 		grid-auto-rows: auto;
 		border: 2px solid red;
+		*/
 		grid-template-areas: "messagebox messagebox"
 			"messagebox messagebox"
 			"messagebox messagebox"
@@ -423,6 +419,14 @@ div.column h2.greyheader {
 			"inputbox textbox"
 			"inputbox textbox"
 			". sendbutton";
+	}
+	
+	div.textbox textarea {
+	height: 45%;
+}
+	input {
+		height: 12%;
+		margin-bottom: 10px;
 	}
 }
 
