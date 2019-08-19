@@ -15,18 +15,7 @@ window.onload = () => {
 		navmenu.classList.toggle("slidedown");
 		navmenu.classList.toggle("slideup");
 	};
-
-	document.getElementById("accordian").addEventListener("click", toggleDropDown);
-
-	Array.from(document.querySelectorAll("menu.navmenu a")).forEach(a => {
-		a.addEventListener("click", function () {
-			toggleDropDown();
-			/*event.preventDefault();
-			window.alert(this.getAttribute("href"));*/
-			smoothScroll(this.getAttribute("href"));
-		});
-	});
-
+	
 	function smoothScroll(target = "#homepage", duration = 1000) {
 		target = document.querySelector(target);
 		var targetPosition = target.getBoundingClientRect().top - 75;
@@ -51,6 +40,20 @@ window.onload = () => {
 		requestAnimationFrame(animation);
 	}
 
+	
+
+	document.getElementById("accordian").addEventListener("click", toggleDropDown);
+
+	Array.from(document.querySelectorAll("menu.navmenu a")).forEach(a => {
+		a.addEventListener("click", function () {
+			toggleDropDown();
+			smoothScroll(this.getAttribute("href"));
+		});
+	});
+	
+	document.querySelector("button#slider").addEventListener("click", () => {smoothScroll();});
+
+	
 
 
 
