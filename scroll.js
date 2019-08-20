@@ -8,18 +8,17 @@
 /*global $*/
 /*jshint esversion:6*/
 
-
 	export default function smoothScroll(target = "#homepage", duration = 1000) {
 		target = document.querySelector(target);
-		var targetPosition = target.getBoundingClientRect().top - 75;
-		var startPosition = window.pageYOffset;
-		var distance = targetPosition - startPosition;
-		var startTime = null;
+		let targetPosition = target.getBoundingClientRect().top - 75;
+		let startPosition = window.pageYOffset;
+		let distance = targetPosition - startPosition;
+		let startTime = null;
 
 		function animation(currentTime) {
 			if (startTime === null) startTime = currentTime;
-			var timeElapsed = currentTime - startTime;
-			var run = ease(timeElapsed, startPosition, targetPosition, duration);
+			let timeElapsed = currentTime - startTime;
+			let run = ease(timeElapsed, startPosition, targetPosition, duration);
 			window.scrollTo(0, run);
 			if (timeElapsed < duration) requestAnimationFrame(animation);
 		}
