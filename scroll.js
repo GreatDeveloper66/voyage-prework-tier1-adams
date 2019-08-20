@@ -10,16 +10,14 @@
 
 	export default function smoothScroll(target = "#homepage", duration = 1000) {
 		target = document.querySelector(target);
-		let targetPosition = target.getBoundingClientRect().top - 75;
-		let startPosition = window.pageYOffset;
-		let distance = targetPosition - startPosition;
+		const targetPosition = target.getBoundingClientRect().top - 75;
+		const startPosition = window.pageYOffset;
 		let startTime = null;
 
 		function animation(currentTime) {
 			if (startTime === null) startTime = currentTime;
 			let timeElapsed = currentTime - startTime;
-			let run = ease(timeElapsed, startPosition, targetPosition, duration);
-			window.scrollTo(0, run);
+			window.scrollTo(0, ease(timeElapsed, startPosition, targetPosition, duration));
 			if (timeElapsed < duration) requestAnimationFrame(animation);
 		}
 
@@ -29,5 +27,6 @@
 			t--;
 			return -c / 2 * (t * (t - 2) - 1) + b;
 		}
+		
 		requestAnimationFrame(animation);
 	}
