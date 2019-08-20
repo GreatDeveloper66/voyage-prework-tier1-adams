@@ -15,7 +15,7 @@ window.onload = () => {
 		navmenu.classList.toggle("slidedown");
 		navmenu.classList.toggle("slideup");
 	};
-	
+
 	document.getElementById("accordian").addEventListener("click", toggleDropDown);
 
 	Array.from(document.querySelectorAll("menu.navmenu a")).forEach(a => {
@@ -24,12 +24,14 @@ window.onload = () => {
 			smoothScroll(this.getAttribute("href"));
 		});
 	});
-	
-	document.querySelector("button#slider").addEventListener("click", () => {smoothScroll();});
 
-	
+	document.querySelector("button#slider").addEventListener("click", () => {
+		smoothScroll();
+	});
 
-
-
-
+	window.addEventListener('scroll', function (e) {
+		const upArrow = document.querySelector("button#slider");
+		upArrow.style.display = window.scrollY < 450 ? "none" : "block";
+		upArrow.style.bottom = window.scrollY > 3700 ? "80px" : "30px";
+	});
 };
