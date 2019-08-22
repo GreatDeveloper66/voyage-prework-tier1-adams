@@ -1,7 +1,7 @@
 /*global window*/
 /*global document*/
 /*global Modernizr*/
-/*global smoothScroll*/
+/*global SmoothScroll*/
 /*global console*/
 /*global $*/
 /*jshint esversion:6*/
