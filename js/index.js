@@ -7,9 +7,10 @@
 /*jshint esversion:6*/
 /*global event*/
 /*global requestAnimationFrame*/
-import smoothScroll from '/scroll.js';
+import smoothScroll from '/js/scroll.js';
 
 window.onload = () => {
+	console.log("hello");
 	const toggleDropDown = () => {
 		let navmenu = document.querySelector("menu.navmenu");
 		navmenu.classList.toggle("slidedown");
