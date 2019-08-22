@@ -3,15 +3,31 @@
 
 body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	background-color: white;
 }
 
+.headerbackground {
+	background-image: url("../images/bg-1.jpg");
+	background-repeat: no-repeat;
+ background-size: 100%;
+	width: 100vw;
+	height: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: -2;
+	
+}
 header {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	height: 650px;
-	background: url("../images/bg-1.jpg") no-repeat fixed center;
+	z-index: 2;
+	
+	/*
+	background: url("../images/bg-1.jpg") no-repeat center;
 	background-size: cover;
+	*/
 }
 
 menu {
