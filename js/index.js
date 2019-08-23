@@ -20,9 +20,9 @@ function setTranslate(xPos, yPos, el) {
 	function scrollLoop() {
 		xScrollPosition = window.scrollX;
 		yScrollPosition = window.scrollY;
-		setTranslate(0, yScrollPosition * -0.2, document.querySelector(".headerbackground"));
-		setTranslate(0, yScrollPosition * -0.2, document.querySelector(".contactbackground"));
-		setTranslate(0, yScrollPosition * -0.2, document.querySelector(".servicesbackground"));
+		setTranslate(0, yScrollPosition * -0.1, document.querySelector(".headerbackground"));
+		setTranslate(0, yScrollPosition * -0.1, document.querySelector(".contactbackground"));
+		setTranslate(0, yScrollPosition * -0.1, document.querySelector(".servicesbackground"));
 		/*
 		setTranslate(0, yScrollPosition * -1.5, blueSquare);
 		setTranslate(0, yScrollPosition * .5, greenPentagon);
