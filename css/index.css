@@ -5,40 +5,19 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-div.container1 {
+div.container {
 	width: 100%;
 	margin: auto;
-	background-color: white;
-	padding: 2px;
-}
-
-div.container2 {
-	width: 100%;
-	margin: auto;
-	padding: 2px;
-	background-color: white;
-}
-
-div.container4 {
-		width: 100%;
-	margin: auto;
-	background-color: white;
-	padding: 2px;
-	
-}
-
-div.container5 {
-		width: 100%;
-	margin: auto;
-	background-color: green;
+	background-color: #FFFFFF;
 	padding: 2px;
 }
 
 .headerbackground {
 	background-image: url("../images/bg-1.jpg");
 	background-repeat: no-repeat;
-	width: 100vw;
-	height: 50vw;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	z-index: -12;
@@ -52,7 +31,6 @@ div.container5 {
 	position: absolute;
 	z-index: -5;
 	top: 4300px;
-	
 }
 
 .servicesbackground {
@@ -74,16 +52,8 @@ header {
 	height: 650px;
 	z-index: 2;
 	
-	/*
-	background: url("../images/bg-1.jpg") no-repeat center;
-	background-size: cover;
-	*/
+	
 }
-/*
-menu {
-	background-color: #3d3e41;
-}
-*/
 
 header menu {
 	display: flex;
