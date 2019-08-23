@@ -3,20 +3,67 @@
 
 body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+div.container1 {
+	width: 100%;
+	margin: auto;
 	background-color: white;
+	padding: 2px;
+}
+
+div.container2 {
+	width: 100%;
+	margin: auto;
+	padding: 2px;
+	background-color: white;
+}
+
+div.container4 {
+		width: 100%;
+	margin: auto;
+	background-color: white;
+	padding: 2px;
+	
+}
+
+div.container5 {
+		width: 100%;
+	margin: auto;
+	background-color: green;
+	padding: 2px;
 }
 
 .headerbackground {
 	background-image: url("../images/bg-1.jpg");
 	background-repeat: no-repeat;
- background-size: 100%;
 	width: 100vw;
-	height: 100vw;
+	height: 50vw;
 	position: fixed;
 	top: 0;
-	z-index: -2;
-	
+	z-index: -3;
 }
+
+.contactbackground {
+	background-image: url("../images/bg-3.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	z-index: -5;
+	top: 4300px;
+}
+
+.servicesbackground {
+	background-image: url(".../images/bg-2.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	z-index: -1;
+	top: 2000px;
+}
+
 header {
 	display: flex;
 	flex-direction: column;
@@ -143,6 +190,7 @@ div.row1 {
 	justify-items: center;
 	align-items: center;
 	max-width: 360px;
+	background-color: white;
 }
 
 div.column {
@@ -224,14 +272,20 @@ div.row6 {
 }
 
 div.row3 {
+	/*
 	background: url("../images/bg-2.jpg") no-repeat fixed center;
 	background-size: cover;
+	*/
 }
 
 div.row6 {
+	/*
 	background: url("../images/bg-3.jpg") no-repeat fixed center;
 	background-size: cover;
+	*/
+	background-color: none;
 	height: 700px;
+	z-index: 4;
 }
 
 div.row6 h2 {
@@ -281,7 +335,7 @@ footer {
 	width: 100%;
 	text-align: center;
 	height: 500px;
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
 	color: #ccc;
 }
 

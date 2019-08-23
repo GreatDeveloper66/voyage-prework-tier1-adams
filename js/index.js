@@ -10,7 +10,25 @@
 import smoothScroll from '/js/scroll.js';
 
 window.onload = () => {
-	console.log("hello");
+function setTranslate(xPos, yPos, el) {
+		el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+	}
+	
+	var xScrollPosition;
+	var yScrollPosition;
+
+	function scrollLoop() {
+		xScrollPosition = window.scrollX;
+		yScrollPosition = window.scrollY;
+		setTranslate(0, yScrollPosition * -0.2, document.querySelector(".headerbackground"));
+		setTranslate(0, yScrollPosition * -0.2, document.querySelector(".contactbackground"));
+		/*
+		setTranslate(0, yScrollPosition * -1.5, blueSquare);
+		setTranslate(0, yScrollPosition * .5, greenPentagon);
+		*/
+
+		requestAnimationFrame(scrollLoop);
+	}
 	const toggleDropDown = () => {
 		let navmenu = document.querySelector("menu.navmenu");
 		navmenu.classList.toggle("slidedown");
@@ -34,8 +52,7 @@ window.onload = () => {
 		const upArrow = document.querySelector("button#slider");
 		upArrow.style.display = window.scrollY < 450 ? "none" : "block";
 		upArrow.style.bottom = window.scrollY > 3700 ? "80px" : "30px";
-			/*
-		document.querySelector(".headerbackground").background.style.top = -(window.pageYOffset * 0.2) + 'px';
-		*/
+		scrollLoop();
+		
 	});
 };
