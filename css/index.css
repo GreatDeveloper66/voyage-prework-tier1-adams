@@ -63,7 +63,7 @@ div.container5 {
 	height: 500px;
 	position: absolute;
 	z-index: -1;
-	top: 1800px;
+	top: 2000px;
 	border: 3px solid red;
 }
 
@@ -79,18 +79,23 @@ header {
 	background-size: cover;
 	*/
 }
-
+/*
 menu {
 	background-color: #3d3e41;
 }
+*/
 
 header menu {
 	display: flex;
 	position: fixed;
 	flex-direction: column;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	margin-top: 75px;
 	width: 100vw;
+	padding: 0;
+	margin: 0;
+	background-color: #3d3e41;
 }
 
 h2 {
@@ -136,18 +141,32 @@ header button {
 	text-align: center;
 }
 
-header i {
+header div.bars {
 	position: fixed;
-	font-size: 60px;
-	color: #FFFEFA;
-}
-
-i:hover {
-	cursor: pointer;
-}
-
-i#accordian {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 60px;
+	height: 34px;
+	width: 43px;
+	border-radius: 4px;
+	background-color: red;
+	background-color: #3d3e41;
+	/*
+	background-color: #FFFEFA;
+	*/
+}
+
+header div.bars div.bar {
+	width: 60%;
+	height: 2px;
+	background-color: #FFFFFF;
+	margin: 2px;
+}
+
+header div.bars:hover {
+	cursor: pointer;
 }
 
 div.titleblock {
@@ -467,7 +486,7 @@ div.column h2.greyheader {
 		margin: auto;
 	}
 	
-	i#accordian {
+	header div.bars {
 		display: none;
 	}
 
