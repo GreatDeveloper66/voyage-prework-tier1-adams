@@ -199,12 +199,12 @@ div.column {
 }
 
 div.column button {
-	border-radius: 5px;
+	border-radius: 10px;
 	font-size: 18px;
 	padding: 10px 30px;
-	width: 170px;
-	height: 40px;
-	color: #FFFF;
+	background: #FFFFFF;
+	border: 1px solid #CCC;
+	color: #666666;
 	transition: all 0.3s ease;
 	text-align: center;
 	line-height: 18px;
@@ -224,11 +224,6 @@ div.column button.lightbluebutton {
 
 div.column button.redbutton {
 	background-color: #852406;
-}
-
-div.row2 div.column button,
-div.row4 div.column button {
-	color: #ccc;
 }
 
 div.row4,
