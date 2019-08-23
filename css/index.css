@@ -41,7 +41,7 @@ div.container5 {
 	height: 50vw;
 	position: fixed;
 	top: 0;
-	z-index: -3;
+	z-index: -12;
 }
 
 .contactbackground {
@@ -52,16 +52,19 @@ div.container5 {
 	position: absolute;
 	z-index: -5;
 	top: 4300px;
+	
 }
 
 .servicesbackground {
-	background-image: url(".../images/bg-2.jpg");
+ background-image: url("../images/bg-2.jpg");
 	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	position: absolute;
 	z-index: -1;
-	top: 2000px;
+	top: 1800px;
+	border: 3px solid red;
 }
 
 header {
