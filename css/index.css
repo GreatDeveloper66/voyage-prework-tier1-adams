@@ -150,7 +150,6 @@ div.titleblock {
 	text-align: center;
 	color: #fff;
 	text-transform: uppercase;
-
 }
 
 .slideup,
@@ -173,17 +172,30 @@ div.row1 {
 	grid-template: 1fr 1fr 1fr/1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 10px;
+	grid-row-gap: 20px;
+	justify-content: stretch;
 	justify-items: center;
 	align-items: center;
+	text-align: center;
 	max-width: 360px;
-	background-color: white;
+	background-color: #FFFFFF;
+}
+
+div.row2 {
+	display: grid;
+	grid-template: 1fr 1fr/1fr;
+	justify-items: center;
+	align-items: start;
+	margin-top: 25px;
+	grid-column-gap: 15px;
 }
 
 div.column {
 	display: grid;
 	justify-items: center;
-	align-items: start;
-	text-align: left;
+	align-items: baseline;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
 div.column button {
@@ -214,21 +226,6 @@ div.column button.redbutton {
 	background-color: #852406;
 }
 
-div.row1 div.column p,
-div.row1 div.column h2 {
-	margin-left: 20px;
-	text-align: left;
-}
-
-div.row2 {
-	display: grid;
-	grid-template: 1fr 1fr/1fr;
-	justify-items: center;
-	align-items: start;
-	margin-top: 25px;
-	grid-column-gap: 15px;
-}
-
 div.row2 div.column button,
 div.row4 div.column button {
 	color: #ccc;
@@ -257,18 +254,7 @@ div.row6 {
 	width: 100%;
 }
 
-div.row3 {
-	/*
-	background: url("../images/bg-2.jpg") no-repeat fixed center;
-	background-size: cover;
-	*/
-}
-
 div.row6 {
-	/*
-	background: url("../images/bg-3.jpg") no-repeat fixed center;
-	background-size: cover;
-	*/
 	background-color: none;
 	height: 700px;
 	z-index: 4;
@@ -417,17 +403,17 @@ div.column button.redbutton {
 
 div.column h2.greenheader {
 	font-size: 20px;
-	font-weight: 200;
+	font-weight: 700;
 	color: #178A27;
 }
 div.column h2.lightblueheader {
 	font-size: 20px;
-	font-weight: 200;
+	font-weight: 700;
 	color: #1686C1;
 }
 div.column h2.greyheader {
 	font-size: 20px;
-	font-weight: 200;
+	font-weight: 700;
 	color: #666666;
 }
 
@@ -465,7 +451,7 @@ div.column h2.greyheader {
 		grid-template: 1fr/1fr 1fr 1fr;
 		max-width: 720px;
 	}
-
+	
 	div.row2 {
 		grid-template: 1fr/1fr 1fr;
 	}
@@ -494,6 +480,25 @@ div.column h2.greyheader {
 		height: 12%;
 		margin-bottom: 10px;
 	}
+	
+	div.row1 div.column {
+		justify-items: start;
+		text-align: left;
+	}
+	
+	div.row1 div.column h2, div.row1 div.column p {
+		margin-left: 20px;
+	}
+	
+	div.row1 div.column button {
+		justify-self: center;
+	}
+	
+	div.row1 div.column a {
+		color: #1686C1;
+		text-decoration: none;
+	}
+	
 }
 
 @media only screen and (min-width: 1024px) {
