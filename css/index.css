@@ -1,35 +1,50 @@
 @import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-html {
-	
-}
-
-.parallax-wrapper {
-	width: 100vw;
-	height: 100vh;
-	padding-top: -20vh;
-	box-sizing: border-box;
-	background-image: url("bg-1.jpg");
-	position: absolute;
-	z-index: -1;
-}
-
-/*
-.parallax-wrapper::before {
-	content: "";
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background-image: url("bg-1.jpg");
-	position: absolute;
-	z-index: -1;
-}
-*/
 body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	
+}
+
+div.container {
+	width: 100%;
+	margin: auto;
+	background-color: #FFFFFF;
+	padding: 2px;
+}
+
+.headerbackground {
+	background-image: url("../images/bg-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	z-index: -12;
+}
+
+.contactbackground {
+	background-image: url("../images/bg-3.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 2000px;
+	position: absolute;
+	z-index: -6;
+	top: auto;
+	bottom: auto;
+}
+
+.servicesbackground {
+ background-image: url("../images/bg-2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	z-index: -2;
+	top: auto;
+	bottom: auto;
+	border: 3px solid red;
 }
 
 header {
@@ -37,13 +52,7 @@ header {
 	flex-direction: column;
 	align-items: flex-end;
 	height: 650px;
-	/*background: url("bg-1.jpg") no-repeat fixed center;
-	background-size: cover;*/
-	background-color: transparent;
-}
-
-menu {
-	background-color: #3d3e41;
+	z-index: 2;
 }
 
 header menu {
@@ -51,13 +60,25 @@ header menu {
 	position: fixed;
 	flex-direction: column;
 	overflow-x: hidden;
-	margin-top: 75px;
+	overflow-y: hidden;
 	width: 100vw;
+	padding: 0;
+	margin: 0;
+	margin-top: 40px;
+	background-color: #3d3e41;
 }
 
-h2 {
-	text-shadow: 2px 2px #333;
-	font-size: 36px;
+h1 {
+	font-size: 70px;
+	text-shadow: 2px 2px #000;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 25px;
+	text-shadow: 1px 1px #333;
+	text-transform: capitalize;
+	margin-top: 0px;
 }
 
 img {
@@ -79,38 +100,51 @@ button:hover {
 
 button#slider {
 	position: fixed;
-	display: none;
 	width: 39px;
 	height: 39px;
-	background: url("top.png") no-repeat center;
+	background: url("../images/top.png") no-repeat center;
 	background-size: contain;
-	bottom: 30px;;
+	bottom: 80px;;
 	right: 20px;
 }
 
 header button {
-	height: 50px;
+	height: 45px;
 	color: #FFFFFF;
 	font-size: 25px;
 	background-color: #3d3e41;
-	border: 1px solid #FFFF;
+	border: 0.5px solid rgba(255,255,255,0.3);
 	margin-left: 15px;
 	width: 100%;
 	text-align: center;
 }
 
-header i {
+header div.bars {
 	position: fixed;
-	font-size: 60px;
-	color: #FFFEFA;
-}
-
-i:hover {
-	cursor: pointer;
-}
-
-i#accordian {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 60px;
+	height: 34px;
+	width: 43px;
+	border-radius: 4px;
+	background-color: red;
+	background-color: #3d3e41;
+	/*
+	background-color: #FFFEFA;
+	*/
+}
+
+header div.bars div.bar {
+	width: 60%;
+	height: 2px;
+	background-color: #FFFFFF;
+	margin: 2px;
+}
+
+header div.bars:hover {
+	cursor: pointer;
 }
 
 div.titleblock {
@@ -118,19 +152,6 @@ div.titleblock {
 	text-align: center;
 	color: #fff;
 	text-transform: uppercase;
-
-}
-
-div.titleblock h1 {
-	font-size: 70px;
-	text-shadow: 2px 2px #000;
-	margin-bottom: 0px;
-}
-
-div.titleblock h2 {
-	font-size: 25px;
-	text-shadow: 1px 1px #333;
-	margin-top: 0px;
 }
 
 .slideup,
@@ -153,25 +174,39 @@ div.row1 {
 	grid-template: 1fr 1fr 1fr/1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 10px;
+	grid-row-gap: 20px;
+	justify-content: stretch;
 	justify-items: center;
 	align-items: center;
+	text-align: center;
 	max-width: 360px;
+	background-color: #FFFFFF;
+}
+
+div.row2 {
+	display: grid;
+	grid-template: 1fr 1fr/1fr;
+	justify-items: center;
+	align-items: start;
+	margin-top: 25px;
+	grid-column-gap: 15px;
 }
 
 div.column {
 	display: grid;
 	justify-items: center;
-	align-items: start;
-	text-align: left;
+	align-items: baseline;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
 div.column button {
-	border-radius: 5px;
+	border-radius: 10px;
 	font-size: 18px;
 	padding: 10px 30px;
-	width: 170px;
-	height: 40px;
-	color: #FFFF;
+	background: #FFFFFF;
+	border: 1px solid #CCC;
+	color: #666666;
 	transition: all 0.3s ease;
 	text-align: center;
 	line-height: 18px;
@@ -191,26 +226,6 @@ div.column button.lightbluebutton {
 
 div.column button.redbutton {
 	background-color: #852406;
-}
-
-div.row1 div.column p,
-div.row1 div.column h2 {
-	margin-left: 20px;
-	text-align: left;
-}
-
-div.row2 {
-	display: grid;
-	grid-template: 1fr 1fr/1fr;
-	justify-items: center;
-	align-items: start;
-	margin-top: 25px;
-	grid-column-gap: 15px;
-}
-
-div.row2 div.column button,
-div.row4 div.column button {
-	color: #ccc;
 }
 
 div.row4,
@@ -235,16 +250,13 @@ div.row6 {
 	height: auto;
 	width: 100%;
 }
-
 div.row3 {
-	background: url("bg-2.jpg") no-repeat fixed center;
-	background-size: cover;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 div.row6 {
-	background: url("bg-3.jpg") no-repeat fixed center;
-	background-size: cover;
-	height: 700px;
+	background-color: none;
 }
 
 div.row6 h2 {
@@ -294,7 +306,7 @@ footer {
 	width: 100%;
 	text-align: center;
 	height: 500px;
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
 	color: #ccc;
 }
 
@@ -389,12 +401,18 @@ div.column button.redbutton {
 }
 
 div.column h2.greenheader {
+	font-size: 20px;
+	font-weight: 700;
 	color: #178A27;
 }
 div.column h2.lightblueheader {
+	font-size: 20px;
+	font-weight: 700;
 	color: #1686C1;
 }
 div.column h2.greyheader {
+	font-size: 20px;
+	font-weight: 700;
 	color: #666666;
 }
 
@@ -413,17 +431,18 @@ div.column h2.greyheader {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		max-height: 75px;
+		max-height: 90px;
 		width: 100%;
-		height: 100px;
-		margin-top: -5px;
+		height: 80px;
+		margin: 0;
+		padding: 0;
 	}
 	
 		div.titleblock {
 		margin: auto;
 	}
 	
-	i#accordian {
+	header div.bars {
 		display: none;
 	}
 
@@ -431,7 +450,7 @@ div.column h2.greyheader {
 		grid-template: 1fr/1fr 1fr 1fr;
 		max-width: 720px;
 	}
-
+	
 	div.row2 {
 		grid-template: 1fr/1fr 1fr;
 	}
@@ -460,6 +479,29 @@ div.column h2.greyheader {
 		height: 12%;
 		margin-bottom: 10px;
 	}
+	
+	div.row1 div.column {
+		justify-items: start;
+		text-align: left;
+	}
+	
+	div.row1 div.column h2, div.row1 div.column p {
+		margin-left: 20px;
+	}
+	
+	div.row1 div.column button {
+		justify-self: center;
+	}
+	
+	div.row1 div.column a {
+		color: #1686C1;
+		text-decoration: none;
+	}
+	
+	.servicesbackground {
+		height: 700px;
+	}
+	
 }
 
 @media only screen and (min-width: 1024px) {
