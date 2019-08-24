@@ -8,9 +8,9 @@
 /*global $*/
 /*jshint esversion:6*/
 
-	export default function smoothScroll(target = "#homepage", duration = 1000) {
-		target = document.querySelector(target);
-		const targetPosition = target.getBoundingClientRect().top - 75;
+	export default function smoothScroll(targ = "#homepage", duration = 1000) {
+		let getIt = document.querySelector(targ);
+		const targetPosition = getIt.getBoundingClientRect().top - 75;
 		const startPosition = window.pageYOffset;
 		let startTime = null;
 
