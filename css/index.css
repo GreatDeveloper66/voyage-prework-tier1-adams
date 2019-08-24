@@ -310,22 +310,43 @@ div.row5 {
 
 footer {
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-auto-rows: auto;
+	justify-items: center;
+	align-items: start;
 	top: auto;
 	margin: auto;
 	width: 100%;
 	text-align: center;
 	height: auto;
-	/*background-color: #FFFFFF;*/
 	color: #ccc;
+	font-style: italic;
+	padding: 5px;
 }
 
-footer h2 {
+footer div.content {
+	
+}
+
+footer div.copyright {
+	color: #666;
+	font-size: 12px;
+	margin-top: 35px;
+	align-self: end;
+}
+
+footer div.content p {
+	font-size: 14px;
+	color: #666;
+	line-height: 1.6em;
+}
+
+footer div.content h2 {
 	font-weight: bold;
-	color: #FFFFFF;
-	text-transform: capitalize;
-	text-shadow: 2px 2px #333;
-	font-size: 36px;
+	color: #666;
+	font-size: 32px;
+	margin-bottom: 25px;
+	margin-top: 35px;
 }
 
 form {
