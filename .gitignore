@@ -1,0 +1,21 @@
+#Ignore Mac system files
+.DS_store
+
+#Ignore other system files
+*.o
+*.pyc
+*.class
+
+#Ignore log files
+*.log
+*.tmp
+*.lock
+
+#Ignore text files
+*.txt
+*.doc
+
+#Ignore excel files
+*.xlsx
+*.xls
+
