@@ -14,15 +14,10 @@ window.onload = () => {
 		el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 	}
 
-	let xScrollPosition;
-	let yScrollPosition;
-
 	function scrollLoop() {
-		xScrollPosition = window.scrollX;
-		yScrollPosition = window.scrollY;
-		setTranslate(0, yScrollPosition * -0.15, document.querySelector(".headerbackground"));
-		setTranslate(0, yScrollPosition * -0.1, document.querySelector(".contactbackground"));
-		setTranslate(0, yScrollPosition * -0.1, document.querySelector(".servicesbackground"));
+		setTranslate(0, window.scrollY * -0.15, document.querySelector(".headerbackground"));
+		setTranslate(0, window.scrollY * -0.1, document.querySelector(".contactbackground"));
+		setTranslate(0, window.scrollY * -0.1, document.querySelector(".servicesbackground"));
 
 		requestAnimationFrame(scrollLoop);
 	}
@@ -51,6 +46,5 @@ window.onload = () => {
 		upArrow.style.display = window.scrollY < 450 ? "none" : "block";
 		upArrow.style.bottom = window.scrollY > 3700 ? "80px" : "30px";
 		scrollLoop();
-
 	});
 };
