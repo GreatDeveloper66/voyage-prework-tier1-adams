@@ -10,11 +10,13 @@
 import smoothScroll from '/js/scroll.js';
 
 window.onload = () => {
+	/*
 	function setTranslate(xPos, yPos, el) {
 		el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 	}
-
+*/
 	function scrollLoop() {
+		const setTranslate = (xPos, yPos, el) => el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 		setTranslate(0, window.scrollY * -0.15, document.querySelector(".headerbackground"));
 		setTranslate(0, window.scrollY * -0.1, document.querySelector(".contactbackground"));
 		setTranslate(0, window.scrollY * -0.1, document.querySelector(".servicesbackground"));
