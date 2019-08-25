@@ -14,8 +14,8 @@ window.onload = () => {
 		el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 	}
 
-	var xScrollPosition;
-	var yScrollPosition;
+	let xScrollPosition;
+	let yScrollPosition;
 
 	function scrollLoop() {
 		xScrollPosition = window.scrollX;
