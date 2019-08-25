@@ -325,6 +325,10 @@ div.row5 div.column {
 	text-align: left;
 }
 
+div.row5 div.column div.textcontainer {
+	padding-left: 30px;
+}
+
 footer {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
