@@ -151,11 +151,7 @@ header div.bars {
 	height: 34px;
 	width: 43px;
 	border-radius: 4px;
-	background-color: red;
 	background-color: #3d3e41;
-	/*
-	background-color: #FFFEFA;
-	*/
 }
 
 header div.bars div.bar {
@@ -324,6 +320,11 @@ div.row5 {
 	width: auto;
 }
 
+div.row5 div.column {
+	justify-items: start;
+	text-align: left;
+}
+
 footer {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
@@ -366,8 +367,8 @@ footer div.content h2 {
 form {
 	display: grid;
 	grid-template: repeat(8, 1fr)/1fr;
-	grid-gap: 15px;
 	grid-auto-rows: auto;
+	grid-gap: 30px;
 	max-width: 600px;
 	height: 450px;
 	grid-template-areas: "messagebox"
@@ -401,9 +402,10 @@ textarea, input {
 	border-radius: 5px;
 	padding: 3px;
 	margin: 3px;
-	color: #000;
 	background: #F2F2F2 none repeat scroll 00;
 	opacity: 0.4;
+	font-size: 15px;
+	font-weight: 500;
 }
 
 div.textbox textarea {
