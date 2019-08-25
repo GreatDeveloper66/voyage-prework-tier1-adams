@@ -369,7 +369,7 @@ form {
 	grid-gap: 15px;
 	grid-auto-rows: auto;
 	max-width: 600px;
-	height: 300px;
+	height: 450px;
 	grid-template-areas: "messagebox"
 		"messagebox"
 		"messagebox"
@@ -399,21 +399,21 @@ form div.sendbutton {
 textarea, input {
 	width: 100%;
 	border-radius: 5px;
-	padding-left: 10px;
+	padding: 3px;
+	margin: 3px;
 	color: #000;
 	background: #F2F2F2 none repeat scroll 00;
 	opacity: 0.4;
 }
 
 div.textbox textarea {
-	height: 25%;
+	height: 100%;
 }
 div.messagebox textarea {
-	height: 33%;
+	height: 100%;
 }
-
 input {
-	height: 7%;
+	height: 20%;
 	margin-bottom: 5px;
 }
 
@@ -513,6 +513,7 @@ div.column h2.greyheader {
 	
 	form {
 		display: grid;
+		height: 300px;
 		grid-template: repeat(8, 1fr)/1fr 1fr;
 		grid-template-areas: "messagebox messagebox"
 			"messagebox messagebox"
@@ -524,12 +525,9 @@ div.column h2.greyheader {
 			". sendbutton";
 	}
 	
-	div.textbox textarea {
-	height: 45%;
-}
 	input {
-		height: 12%;
-		margin-bottom: 10px;
+		height: 15%;
+		margin-bottom: 14px;
 	}
 	
 	div.row1 div.column {
