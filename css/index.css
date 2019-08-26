@@ -33,7 +33,7 @@ div.container:nth-child(3), div.container:nth-child(6) {
 	background-color: transparent;
 }
 
-.headerbackground {
+div.headerbackground {
 	background-image: url("../images/bg-1a.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -45,7 +45,7 @@ div.container:nth-child(3), div.container:nth-child(6) {
 	z-index: -12;
 }
 
-.servicesbackground {
+div.servicesbackground {
  background-image: url("../images/bg-2a.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -58,7 +58,7 @@ div.container:nth-child(3), div.container:nth-child(6) {
 	border: 3px solid red;
 }
 
-.contactbackground {
+div.contactbackground {
 	background-image: url("../images/bg-3a.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -101,6 +101,7 @@ h2, h3 {
 
 p {
 	font-family 'Roboto Condensed', Helvitica, Arial, sans-serif;
+	color: #000000;
 }
 
 h3 {
@@ -209,6 +210,10 @@ div.row1 {
 	background-color: #FFFFFF;
 }
 
+div.row1 div.column button {
+	color: #000000;
+}
+
 div.row2 {
 	display: grid;
 	grid-template: 1fr 1fr/1fr;
@@ -258,6 +263,7 @@ div.row5 {
 	margin: auto;
 	margin-top: 50px;
 	display: grid;
+	grid-auto-rows: auto;
 	grid-gap: 15px;
 	width: 90%;
 	max-width: 1130px;
@@ -304,10 +310,7 @@ div.row3 p {
 }
 
 div.row4 {
-	display: grid;
 	grid-template: repeat(4, 1fr)/1fr;
-	grid-auto-rows: auto;
-	height: auto;
 }
 
 div.row4 div.column {
@@ -317,23 +320,19 @@ div.row4 div.column {
 
 div.row4 div.column h2 {
 	text-align: center;
-	color: #666666;
 }
 
 div.row4 div.column p {
 	text-align: left;
-	margin-left: 15px;
-	color: #666666;
+	margin-left: 20px;
 }
 
 div.row4 div.textcontainer {
-	width: 50%;
+	width: 60%;
 }
 
 div.row5 {
 	grid-template: 1fr/1fr;
-	grid-auto-rows: auto;
-	height: auto;
 	width: auto;
 }
 
@@ -363,10 +362,6 @@ footer {
 	background-color: #FFFFFF;
 }
 
-footer div.content {
-	
-}
-
 footer div.copyright {
 	color: #666;
 	font-size: 12px;
@@ -390,7 +385,7 @@ form {
 	grid-template: repeat(8, 1fr)/1fr;
 	grid-auto-rows: auto;
 	grid-gap: 30px;
-	max-width: 600px;
+	max-width: 400px;
 	height: 450px;
 	grid-template-areas: "messagebox"
 		"messagebox"
@@ -455,34 +450,44 @@ form button:hover {
 		color: #000000;
 }
 
-div.column button.greenbutton {
-	background-color: #178A27;
+div.column button.magentabutton {
+	background-color: #FF00FF;
 }
 
-div.column button.lightbluebutton {
-	background-color: #1686C1;
+div.column button.cyanbutton {
+	background-color: #00FFFF;
 }
 
-div.column button.redbutton {
-	background-color: #852406;
+div.column button.yellowbutton {
+	background-color: #FFFF00;
 }
 
-div.column h2.greenheader {
+div.column h2.magentaheader {
 	font-size: 20px;
 	font-weight: 700;
-	color: #178A27;
+	color: #FF00FF;
 }
-div.column h2.lightblueheader {
+div.column h2.cyanheader {
 	font-size: 20px;
 	font-weight: 700;
-	color: #1686C1;
+	color: #00FFFF;
 }
-div.column h2.greyheader {
+div.column h2.yellowheader {
 	font-size: 20px;
 	font-weight: 700;
-	color: #666666;
+	color: #FFFF00;
 }
-
+@media only screen and (min-width: 520px){
+	div.row4 {
+		grid-template: 1fr 1fr/1fr 1fr;
+	}
+	div.row4 div.textcontainer {
+		width: 85%;
+	}
+	div.contactbackground {
+		top: 6200px;
+	}
+}
 @media only screen and (min-width: 768px) {
 	header {
 		flex-direction: column;
@@ -498,11 +503,9 @@ div.column h2.greyheader {
 		height: 500px;
 	}
 	
-	div.row4 div.textcontainer {
-	width: 75%;
-}
-	.contactbackground {
-		top: 4600px;
+	
+	div.contactbackground {
+		top: 4500px;
 		height: 650px;
 		z-index: -1;
 	}
@@ -533,14 +536,14 @@ div.column h2.greyheader {
 	div.row2 {
 		grid-template: 1fr/1fr 1fr;
 	}
-
-	div.row4 {
-		grid-template: 1fr 1fr/1fr 1fr;
+	div.row4 div.textcontainer {
+		width: 60%;
 	}
 	
 	form {
 		display: grid;
 		height: 300px;
+		max-width: 600px;
 		grid-template: repeat(8, 1fr)/1fr 1fr;
 		grid-template-areas: "messagebox messagebox"
 			"messagebox messagebox"
@@ -586,11 +589,14 @@ div.column h2.greyheader {
 		grid-template: 1fr/1fr 1fr 1fr 1fr;
 	}
 	
-	div.row6 {
-		height: 450px;
-	}
-	.contactbackground {
-		top: 4050px;
+	div.row4 div.textcontainer {
+	width: auto;
+}
+	
+	div.row6, div.contactbackground {
 		height: 600px;
+	}
+	div.contactbackground {
+		top: 4050px;
 	}
 }
