@@ -21,8 +21,13 @@ window.onload = () => {
 	}
 	const toggleDropDown = () => {
 		let navmenu = document.querySelector("menu.navmenu");
-		navmenu.classList.toggle("slidedown");
-		navmenu.classList.toggle("slideup");
+		if(!navmenu.classList.contains("slidedown") && !navmenu.classList.contains("slideup")){
+				navmenu.classList.add("slidedown");
+		}
+		else {
+			navmenu.classList.toggle("slidedown");
+		 navmenu.classList.toggle("slideup");
+		}
 	};
 
 	document.getElementById("accordian").addEventListener("click", toggleDropDown);
