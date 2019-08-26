@@ -15,7 +15,7 @@ window.onload = () => {
 		
 		const setTranslate = (xPos, yPos, el) => el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 		for(let i=0;i<3;i++){
-			setTranslate(0, window.scrollY * scrollRate, document.querySelector(elem));
+			setTranslate(0, window.scrollY * scrollRate, document.querySelector(elementArray[i]));
 		}
 		requestAnimationFrame(scrollLoop);
 	}
