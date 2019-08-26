@@ -256,7 +256,7 @@ div.row5 {
 	height: auto;
 }
 
-div.row3,div.row6 {
+div.row3 {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -269,6 +269,9 @@ div.row3,div.row6 {
 
 div.row6 {
 	display: grid;
+	width: 100%;
+	margin: auto;
+	margin-top: 25px;
 	justify-items: center;
 	align-items: center;
 	grid-template: 1fr/1fr;
@@ -492,7 +495,7 @@ div.column h2.greyheader {
 	}
 	
 	div.row6 {
-		height: 550px;
+		height: 500px;
 	}
 	
 	div.row4 div.textcontainer {
@@ -500,7 +503,7 @@ div.column h2.greyheader {
 }
 	.contactbackground {
 		top: 4600px;
-		height: 600px;
+		height: 650px;
 		z-index: -1;
 	}
 	menu.navmenu {
@@ -584,7 +587,7 @@ div.column h2.greyheader {
 	}
 	
 	div.row6 {
-		height: 550px;
+		height: 450px;
 	}
 	.contactbackground {
 		top: 4050px;
