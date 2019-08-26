@@ -42,7 +42,7 @@ window.onload = () => {
 	window.addEventListener('scroll', function (e) {
 		const upArrow = document.querySelector("button#slider");
 		upArrow.style.display = window.scrollY < 450 ? "none" : "block";
-		upArrow.style.bottom = window.scrollY > 3700 ? "80px" : "30px";
+		upArrow.style.bottom = window.scrollY > 3400 ? "80px" : "30px";
 		scrollLoop();
 	});
 };
