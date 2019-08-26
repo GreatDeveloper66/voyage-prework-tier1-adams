@@ -50,7 +50,7 @@ div.container:nth-child(3), div.container:nth-child(6) {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 1000px;
+	height: 850px;
 	position: absolute;
 	z-index: -1;
 	top: 7500px;
@@ -256,28 +256,20 @@ div.row5 {
 	height: auto;
 }
 
-div.row3 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+div.row3, div.row6 {
+	display: grid;
+	width: 100%;
+	justify-items: center;
 	align-items: center;
 	margin: auto;
-	margin-top: 25px;
 	height: auto;
-	width: 100%;
+	grid-template: 1fr/1fr;
+	background-color: transparent;
+	margin: 0;
 }
 
 div.row6 {
-	display: grid;
-	width: 100%;
-	margin: auto;
-	margin-top: 25px;
-	justify-items: center;
-	align-items: center;
-	grid-template: 1fr/1fr;
 	height: 600px;
-	background-color: transparent;
-	margin: 0;
 }
 
 div.row3 {
