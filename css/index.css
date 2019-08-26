@@ -215,10 +215,12 @@ div.row1 div.column button {
 }
 
 div.row2 {
+	margin: auto;
 	display: grid;
 	grid-template: 1fr 1fr/1fr;
 	justify-items: center;
 	align-items: start;
+	grid-auto-columns: auto;
 	margin-top: 25px;
 	grid-column-gap: 15px;
 }
@@ -343,6 +345,15 @@ div.row5 div.column {
 
 div.row5 div.column div.textcontainer {
 	padding-left: 30px;
+}
+
+div.row2 div.column {
+		border: 3px solid red;
+		width: 85%;
+	}
+div.row2 div.column p {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 footer {
@@ -487,6 +498,10 @@ div.column h2.yellowheader {
 	div.contactbackground {
 		top: 6200px;
 	}
+	div.row2 div.column {
+		width: 550px;
+	}
+	
 }
 @media only screen and (min-width: 768px) {
 	header {
@@ -536,6 +551,11 @@ div.column h2.yellowheader {
 	div.row2 {
 		grid-template: 1fr/1fr 1fr;
 	}
+	
+	div.row2 div.column {
+		width: auto;
+	}
+	
 	div.row4 div.textcontainer {
 		width: 60%;
 	}
@@ -598,5 +618,11 @@ div.column h2.yellowheader {
 	}
 	div.contactbackground {
 		top: 4050px;
+	}
+	div.row2 {
+		width: 1200px;
+	}
+	div.row2 div.column {
+		width: 555px;
 	}
 }
