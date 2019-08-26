@@ -12,11 +12,11 @@ import smoothScroll from '/js/scroll.js';
 window.onload = () => {
 
 	function scrollLoop(elementArray = [".headerbackground", ".contactbackground", ".servicesbackground"], scrollRate = -0.15) {
-
+		
 		const setTranslate = (xPos, yPos, el) => el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
-		elementArray.forEach(elem => {
+		for(let i=0;i<3;i++){
 			setTranslate(0, window.scrollY * scrollRate, document.querySelector(elem));
-		});
+		}
 		requestAnimationFrame(scrollLoop);
 	}
 	const toggleDropDown = () => {
