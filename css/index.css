@@ -302,6 +302,11 @@ div.row4 {
 	height: auto;
 }
 
+div.row4 div.column {
+	grid-template-rows: 1fr 1fr;
+	margin-bottom: 0;
+}
+
 div.row4 div.column h2 {
 	text-align: center;
 	color: #666666;
@@ -311,6 +316,10 @@ div.row4 div.column p {
 	text-align: left;
 	margin-left: 15px;
 	color: #666666;
+}
+
+div.row4 div.textcontainer {
+	width: 50%;
 }
 
 div.row5 {
@@ -480,6 +489,10 @@ div.column h2.greyheader {
 	div.row6 {
 		height: 550px;
 	}
+	
+	div.row4 div.textcontainer {
+	width: 75%;
+}
 	.contactbackground {
 		top: 4600px;
 		height: 600px;
