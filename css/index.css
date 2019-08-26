@@ -550,6 +550,7 @@ div.column h2.yellowheader {
 	
 	div.row2 {
 		grid-template: 1fr/1fr 1fr;
+		width: 85%;
 	}
 	
 	div.row2 div.column {
@@ -620,9 +621,9 @@ div.column h2.yellowheader {
 		top: 4050px;
 	}
 	div.row2 {
-		width: 1200px;
+		width: 900px;
 	}
 	div.row2 div.column {
-		width: 555px;
+		width: auto;
 	}
 }
