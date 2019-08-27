@@ -38,10 +38,9 @@ div.headerbackground {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 700px;
+	height: 1000px;
 	position: absolute;
-	top: auto;
-	bottom: auto;
+	top: 0;
 	z-index: -12;
 }
 
@@ -53,9 +52,7 @@ div.servicesbackground {
 	height: 1000px;
 	position: absolute;
 	z-index: -2;
-	top: auto;
-	bottom: auto;
-	border: 3px solid red;
+	top: 4250px;
 }
 
 div.contactbackground {
@@ -63,10 +60,10 @@ div.contactbackground {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 850px;
+	height: 1000px;
 	position: absolute;
 	z-index: -1;
-	top: 7500px;
+	top: 9200px;
 }
 
 header {
@@ -74,7 +71,6 @@ header {
 	flex-direction: column;
 	align-items: flex-end;
 	height: 700px;
-	z-index: 2;
 }
 
 header menu {
@@ -289,12 +285,22 @@ div.row3, div.row6 {
 }
 
 div.row6 {
-	height: 600px;
+	height: 750px;
+}
+div.row6 div.textcontainer {
+	text-align: center;
 }
 
 div.row3 {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	height: 550px;
+}
+
+div.row3 div.textcontainer {
+	text-align: center;
+}
+
+div.row3 div.textcontainer h2 {
+	font-size: 30px;
 }
 
 div.row6 h2 {
@@ -498,8 +504,9 @@ div.column h2.yellowheader {
 	div.row4 div.textcontainer {
 		width: 85%;
 	}
+	
 	div.contactbackground {
-		top: 6200px;
+		top: 7800px;
 	}
 	div.row2 div.column {
 		width: 550px;
@@ -528,10 +535,14 @@ div.column h2.yellowheader {
 	
 	
 	div.contactbackground {
-		top: 4500px;
-		height: 650px;
-		z-index: -1;
+		top: 5500px;
+		height: 1000px;
 	}
+	
+	div.servicesbackground {
+		top: 2500px;
+	}
+	
 	menu.navmenu {
 		flex-direction: row;
 		justify-content: center;
@@ -621,11 +632,12 @@ div.column h2.yellowheader {
 	width: auto;
 }
 	
-	div.row6, div.contactbackground {
-		height: 600px;
+	div.row6 {
+		height: 500px;
 	}
 	div.contactbackground {
-		top: 4050px;
+		top: 4800px;
+		height: 900px;
 	}
 	div.row2 {
 		width: 900px;

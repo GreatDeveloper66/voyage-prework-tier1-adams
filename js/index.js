@@ -12,7 +12,7 @@ import smoothScroll from '/js/scroll.js';
 window.onload = () => {
 
 	function scrollLoop() {
-		let scrollRate = -0.15;
+		let scrollRate = -0.35;
 		let elementArray = [".headerbackground",".contactbackground",".servicesbackground"];
 		const setTranslate = (xPos, yPos, el) => el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 		for(let i=0;i<3;i++){
